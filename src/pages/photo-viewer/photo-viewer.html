@@ -1,0 +1,31 @@
+<!--
+  Generated template for the PhotoViewerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content >
+  <!--<img src="{{src}}" style="max-height: 200px; width: auto;">-->
+
+  <button icon-start ion-button full clear (click)="setAsWallpaper()">
+    <ion-icon name="cloud-download"></ion-icon>
+    Download & Set As Wallpaper
+  </button>
+  <button icon-start *ngIf="!isFavorite" ion-button full clear (click)="addToFavorite()">
+    <ion-icon name="star"></ion-icon>
+    Add to favorites
+  </button>
+  <button icon-start *ngIf="isFavorite" ion-button full clear (click)="presentConfirm()">
+    <ion-icon name="star-outline"></ion-icon>
+    Remove from favorites
+  </button>
+  <button icon-start ion-button full clear (click)="open()">
+    <ion-icon name="open"></ion-icon>
+    Open & Share
+  </button>
+
+</ion-content>
+

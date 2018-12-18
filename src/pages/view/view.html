@@ -1,0 +1,70 @@
+<!--
+  Generated template for the ViewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>BTS Wallpaper HD</ion-title>
+<!--    <ion-buttons right>
+      <button (click)="goToFavorites()" ion-button>
+        <ion-icon style="font-size: 25px;" name="star"></ion-icon>
+      </button>
+
+      <button (click)="goToSettings()" ion-button>
+        <ion-icon style="font-size: 25px;" name="settings"></ion-icon>
+      </button>
+    </ion-buttons>-->
+    <!--<ion-toolbar>
+      <ion-segment [(ngModel)]="activeSegment" color="light">
+        <ion-segment-button value="pictures">
+          <ion-icon name="camera"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="favorites" (click) = "prepareFavs()">
+          <ion-icon name="bookmark"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>-->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 col-md-3 col-lg-2 col-xl-1  *ngFor="let image of pics" no-padding>
+        <!--{{'/assets/imgs/data/' + category.category + '/' + category.pics[0].name + '.' + category.pics[0].ext}}-->
+        <div class="image-container"
+             (click) = "openImg(imgsSource + '/' + image.name + '.' + image.ext, image)"
+             [style.background-image] = "'url(' + imgsSource + '/' + image.name + '.' + image.ext + ')'">
+
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--<div *ngIf="activeSegment == 'favorites'">
+    <button *ngIf="isEmpty" color="danger" ion-button full>
+      Empty !
+    </button>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6 col-md-3 col-lg-2 col-xl-1  *ngFor="let image of favList" no-padding>
+          &lt;!&ndash;{{'/assets/imgs/data/' + category.category + '/' + category.pics[0].name + '.' + category.pics[0].ext}}&ndash;&gt;
+          <div class="image-container"
+               (click)="view(image.image)"
+               [style.background-image]="'url(' + image.url + ')'">
+
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>-->
+
+</ion-content>
